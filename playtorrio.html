@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayTorrio - Torrent Streaming</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-play-circle"></i> StreamHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="stremio.html" class="nav-link">Stremio</a></li>
+                <li><a href="cloudstream.html" class="nav-link">CloudStream</a></li>
+                <li><a href="nuvio.html" class="nav-link">Nuvio</a></li>
+                <li><a href="skystream.html" class="nav-link">SkyStream</a></li>
+                <li><a href="playtorrio.html" class="nav-link active">PlayTorrio</a></li>
+            </ul>
+            <div class="contact-info">
+                <a href="mailto:m10juniorr@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <section class="service-header" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+        <div class="container">
+            <h1>PlayTorrio</h1>
+            <p>Advanced Torrent Streaming & Content</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2 class="section-title">Download PlayTorrio</h2>
+            <div class="download-grid">
+                <div class="download-box">
+                    <i class="fab fa-android"></i>
+                    <h3>Android</h3>
+                    <p>APK Download</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-apple"></i>
+                    <h3>iOS</h3>
+                    <p>iPhone App</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-windows"></i>
+                    <h3>Windows</h3>
+                    <p>PC Desktop</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fas fa-globe"></i>
+                    <h3>Web Version</h3>
+                    <p>Browser-based</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Access</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="addons-section">
+        <div class="container">
+            <h2 class="section-title">Torrent Content & Sources</h2>
+            
+            <!-- Search & Filter -->
+            <div class="search-bar">
+                <input type="text" id="torrentSearch" placeholder="Search content..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterAddons('all')">All</button>
+                    <button class="filter-btn" onclick="filterAddons('movies')">Movies</button>
+                    <button class="filter-btn" onclick="filterAddons('tv')">TV Shows</button>
+                    <button class="filter-btn" onclick="filterAddons('content')">Content</button>
+                </div>
+            </div>
+
+            <!-- Torrent Grid -->
+            <div class="addons-grid" id="torrentGrid">
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>High-Quality Movies</h3>
+                        <span class="badge">4K/HD</span>
+                    </div>
+                    <p>Latest movies in 4K and HD quality</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> 4K UHD</span>
+                        <span class="feature"><i class="fas fa-check"></i> 1080p HD</span>
+                        <span class="feature"><i class="fas fa-check"></i> Fast Downloads</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/playtorrio-movies')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Browse</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="tv">
+                    <div class="addon-header">
+                        <h3>TV Episodes Hub</h3>
+                        <span class="badge">Updated</span>
+                    </div>
+                    <p>Latest TV episodes and complete series</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> New Episodes Daily</span>
+                        <span class="feature"><i class="fas fa-check"></i> Full Series</span>
+                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/playtorrio-tv')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Browse</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="content">
+                    <div class="addon-header">
+                        <h3>Anime Collection</h3>
+                        <span class="badge">Anime</span>
+                    </div>
+                    <p>Extensive anime torrent collection</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> HD Anime</span>
+                        <span class="feature"><i class="fas fa-check"></i> Subbed & Dubbed</span>
+                        <span class="feature"><i class="fas fa-check"></i> Complete Series</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/playtorrio-anime')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Browse</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>Documentary Archive</h3>
+                        <span class="badge">Premium</span>
+                    </div>
+                    <p>Complete documentary collection</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> HD Documentary</span>
+                        <span class="feature"><i class="fas fa-check"></i> Rare Content</span>
+                        <span class="feature"><i class="fas fa-check"></i> Fast Access</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/playtorrio-docs')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Browse</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="tv">
+                    <div class="addon-header">
+                        <h3>Sports Events</h3>
+                        <span class="badge">Live</span>
+                    </div>
+                    <p>Sports events and matches</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> HD Sports</span>
+                        <span class="feature"><i class="fas fa-check"></i> All Sports</span>
+                        <span class="feature"><i class="fas fa-check"></i> Live Streaming</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/playtorrio-sports')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Browse</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="content">
+                    <div class="addon-header">
+                        <h3>International Content</h3>
+                        <span class="badge">Global</span>
+                    </div>
+                    <p>Content from around the world</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Multi-Language</span>
+                        <span class="feature"><i class="fas fa-check"></i> Regional Content</span>
+                        <span class="feature"><i class="fas fa-check"></i> Subtitles</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/playtorrio-global')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Browse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="setup-guide">
+        <div class="container">
+            <h2 class="section-title">PlayTorrio Features</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Fast Streaming</h3>
+                    <p>Instant streaming without downloads</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>High Quality</h3>
+                    <p>Available in 4K, HD, and more</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Easy Search</h3>
+                    <p>Find content quickly</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Safe & Secure</h3>
+                    <p>Protected streaming experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>StreamHub</h4>
+                    <p>Your premium streaming portal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="skystream.html">SkyStream</a></li>
+                        <li><a href="stremio.html">Stremio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:m10juniorr@gmail.com">m10juniorr@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StreamHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
