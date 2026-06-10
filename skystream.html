@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyStream - Premium Streaming Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-play-circle"></i> StreamHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="stremio.html" class="nav-link">Stremio</a></li>
+                <li><a href="cloudstream.html" class="nav-link">CloudStream</a></li>
+                <li><a href="nuvio.html" class="nav-link">Nuvio</a></li>
+                <li><a href="skystream.html" class="nav-link active">SkyStream</a></li>
+                <li><a href="playtorrio.html" class="nav-link">PlayTorrio</a></li>
+            </ul>
+            <div class="contact-info">
+                <a href="mailto:m10juniorr@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <section class="service-header" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">
+        <div class="container">
+            <h1>SkyStream</h1>
+            <p>Premium Streaming Solutions & Services</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2 class="section-title">Download SkyStream</h2>
+            <div class="download-grid">
+                <div class="download-box">
+                    <i class="fab fa-android"></i>
+                    <h3>Android</h3>
+                    <p>Latest Version</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-apple"></i>
+                    <h3>iOS</h3>
+                    <p>iPhone & iPad</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-windows"></i>
+                    <h3>Windows</h3>
+                    <p>Desktop App</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-linux"></i>
+                    <h3>Linux</h3>
+                    <p>All Distributions</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="addons-section">
+        <div class="container">
+            <h2 class="section-title">SkyStream Solutions</h2>
+            
+            <!-- Search & Filter -->
+            <div class="search-bar">
+                <input type="text" id="solutionSearch" placeholder="Search solutions..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterAddons('all')">All</button>
+                    <button class="filter-btn" onclick="filterAddons('movies')">Movies</button>
+                    <button class="filter-btn" onclick="filterAddons('live')">Live TV</button>
+                    <button class="filter-btn" onclick="filterAddons('sports')">Sports</button>
+                </div>
+            </div>
+
+            <!-- Solutions Grid -->
+            <div class="addons-grid" id="solutionsGrid">
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>Movies Library</h3>
+                        <span class="badge">Extensive</span>
+                    </div>
+                    <p>Access to thousands of movies worldwide</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> 4K Movies</span>
+                        <span class="feature"><i class="fas fa-check"></i> Multiple Languages</span>
+                        <span class="feature"><i class="fas fa-check"></i> Regular Updates</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-movies')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Access</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="live">
+                    <div class="addon-header">
+                        <h3>Live TV Channels</h3>
+                        <span class="badge">24/7</span>
+                    </div>
+                    <p>Live TV from 100+ channels</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                        <span class="feature"><i class="fas fa-check"></i> EPG Guide</span>
+                        <span class="feature"><i class="fas fa-check"></i> Recording Option</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-live')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Access</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="sports">
+                    <div class="addon-header">
+                        <h3>Sports Streaming</h3>
+                        <span class="badge">Live Events</span>
+                    </div>
+                    <p>Live sports events and replays</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> HD Sports</span>
+                        <span class="feature"><i class="fas fa-check"></i> All Sports</span>
+                        <span class="feature"><i class="fas fa-check"></i> Multiple Angles</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-sports')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Access</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>TV Series Hub</h3>
+                        <span class="badge">Binge</span>
+                    </div>
+                    <p>Complete TV series and episodes</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Latest Episodes</span>
+                        <span class="feature"><i class="fas fa-check"></i> Full Seasons</span>
+                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-series')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Access</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="live">
+                    <div class="addon-header">
+                        <h3>Documentary Channel</h3>
+                        <span class="badge">Educational</span>
+                    </div>
+                    <p>Premium documentaries and shows</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> HD Documentaries</span>
+                        <span class="feature"><i class="fas fa-check"></i> Nature & Science</span>
+                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-docs')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Access</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="sports">
+                    <div class="addon-header">
+                        <h3>Premium Sports Pass</h3>
+                        <span class="badge">VIP</span>
+                    </div>
+                    <p>Exclusive sports content and analysis</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Premium Matches</span>
+                        <span class="feature"><i class="fas fa-check"></i> Expert Analysis</span>
+                        <span class="feature"><i class="fas fa-check"></i> 4K Quality</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-premium-sports')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Access</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Guide -->
+    <section class="setup-guide">
+        <div class="container">
+            <h2 class="section-title">Quick Setup Guide</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Download App</h3>
+                    <p>Download SkyStream for your device</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Install</h3>
+                    <p>Install the application</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Launch</h3>
+                    <p>Open SkyStream app</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Start Streaming</h3>
+                    <p>Browse and start watching</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>StreamHub</h4>
+                    <p>Your premium streaming portal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nuvio.html">Nuvio</a></li>
+                        <li><a href="playtorrio.html">PlayTorrio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:m10juniorr@gmail.com">m10juniorr@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StreamHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
