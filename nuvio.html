@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvio - Plugins & Addons</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-play-circle"></i> StreamHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="stremio.html" class="nav-link">Stremio</a></li>
+                <li><a href="cloudstream.html" class="nav-link">CloudStream</a></li>
+                <li><a href="nuvio.html" class="nav-link active">Nuvio</a></li>
+                <li><a href="skystream.html" class="nav-link">SkyStream</a></li>
+                <li><a href="playtorrio.html" class="nav-link">PlayTorrio</a></li>
+            </ul>
+            <div class="contact-info">
+                <a href="mailto:m10juniorr@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <section class="service-header" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);">
+        <div class="container">
+            <h1>Nuvio</h1>
+            <p>Advanced Plugins, Addons & Extensions</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2 class="section-title">Download Nuvio</h2>
+            <div class="download-grid">
+                <div class="download-box">
+                    <i class="fab fa-android"></i>
+                    <h3>Android</h3>
+                    <p>Latest APK</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-apple"></i>
+                    <h3>iOS</h3>
+                    <p>App Store</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-windows"></i>
+                    <h3>Windows</h3>
+                    <p>Desktop App</p>
+                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plugins & Addons Section -->
+    <section class="addons-section">
+        <div class="container">
+            <h2 class="section-title">Popular Nuvio Plugins & Addons</h2>
+            
+            <!-- Search & Filter -->
+            <div class="search-bar">
+                <input type="text" id="pluginSearch" placeholder="Search plugins..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterAddons('all')">All</button>
+                    <button class="filter-btn" onclick="filterAddons('streaming')">Streaming</button>
+                    <button class="filter-btn" onclick="filterAddons('provider')">Providers</button>
+                    <button class="filter-btn" onclick="filterAddons('tools')">Tools</button>
+                </div>
+            </div>
+
+            <!-- Plugins Grid -->
+            <div class="addons-grid" id="pluginsGrid">
+                <div class="addon-card" data-category="streaming">
+                    <div class="addon-header">
+                        <h3>Torrent Plugin</h3>
+                        <span class="badge">Popular</span>
+                    </div>
+                    <p>Direct torrent streaming integration</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Instant Streaming</span>
+                        <span class="feature"><i class="fas fa-check"></i> 4K Support</span>
+                        <span class="feature"><i class="fas fa-check"></i> No Buffering</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/nuvio-torrent-plugin')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="provider">
+                    <div class="addon-header">
+                        <h3>Movies Provider</h3>
+                        <span class="badge">Top Rated</span>
+                    </div>
+                    <p>HD Movies from multiple sources</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> 1080p Quality</span>
+                        <span class="feature"><i class="fas fa-check"></i> Multi-Source</span>
+                        <span class="feature"><i class="fas fa-check"></i> Latest Releases</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/nuvio-movies')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="provider">
+                    <div class="addon-header">
+                        <h3>TV Shows Provider</h3>
+                        <span class="badge">Updated Daily</span>
+                    </div>
+                    <p>Latest TV episodes daily</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Daily Updates</span>
+                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                        <span class="feature"><i class="fas fa-check"></i> Full Series</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/nuvio-tv')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="tools">
+                    <div class="addon-header">
+                        <h3>Subtitle Manager</h3>
+                        <span class="badge">Utility</span>
+                    </div>
+                    <p>Advanced subtitle management tool</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Multi-Language</span>
+                        <span class="feature"><i class="fas fa-check"></i> Auto Sync</span>
+                        <span class="feature"><i class="fas fa-check"></i> Custom Fonts</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/nuvio-subtitle')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="streaming">
+                    <div class="addon-header">
+                        <h3>RealDebrid Plugin</h3>
+                        <span class="badge">Premium</span>
+                    </div>
+                    <p>Premium links via RealDebrid</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> High Speed</span>
+                        <span class="feature"><i class="fas fa-check"></i> Premium Quality</span>
+                        <span class="feature"><i class="fas fa-check"></i> No Ads</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/nuvio-realdebrid')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="tools">
+                    <div class="addon-header">
+                        <h3>Video Player Pro</h3>
+                        <span class="badge">Enhanced</span>
+                    </div>
+                    <p>Advanced video player with features</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> Gesture Control</span>
+                        <span class="feature"><i class="fas fa-check"></i> Playback Speed</span>
+                        <span class="feature"><i class="fas fa-check"></i> Resume Function</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/nuvio-player')">Copy Link</button>
+                        <a href="#" class="btn btn-small btn-secondary" target="_blank">Install</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guide -->
+    <section class="setup-guide">
+        <div class="container">
+            <h2 class="section-title">How to Install Plugins</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Open Nuvio</h3>
+                    <p>Launch Nuvio application</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Settings</h3>
+                    <p>Go to Settings menu</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Add Plugin</h3>
+                    <p>Select "Plugins" section</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Install</h3>
+                    <p>Paste plugin link and install</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>StreamHub</h4>
+                    <p>Your premium streaming portal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="stremio.html">Stremio</a></li>
+                        <li><a href="cloudstream.html">CloudStream</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:m10juniorr@gmail.com">m10juniorr@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StreamHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
