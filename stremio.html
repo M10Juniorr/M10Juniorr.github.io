@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stremio - Addons & Extensions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-play-circle"></i> StreamHub</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="stremio.html" class="nav-link active">Stremio</a></li>
+                <li><a href="cloudstream.html" class="nav-link">CloudStream</a></li>
+                <li><a href="nuvio.html" class="nav-link">Nuvio</a></li>
+                <li><a href="skystream.html" class="nav-link">SkyStream</a></li>
+                <li><a href="playtorrio.html" class="nav-link">PlayTorrio</a></li>
+            </ul>
+            <div class="contact-info">
+                <a href="mailto:m10juniorr@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Header -->
+    <section class="service-header" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <h1>Stremio</h1>
+            <p>Premium Addons, Extensions & Entertainment</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <h2 class="section-title">Download Stremio</h2>
+            <div class="download-grid">
+                <div class="download-box">
+                    <i class="fab fa-windows"></i>
+                    <h3>Windows</h3>
+                    <p>v10.x Latest</p>
+                    <a href="https://www.stremio.com/downloads" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-apple"></i>
+                    <h3>macOS</h3>
+                    <p>Intel & M1/M2</p>
+                    <a href="https://www.stremio.com/downloads" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-linux"></i>
+                    <h3>Linux</h3>
+                    <p>All Distributions</p>
+                    <a href="https://www.stremio.com/downloads" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+                <div class="download-box">
+                    <i class="fab fa-android"></i>
+                    <h3>Android</h3>
+                    <p>APK & Play Store</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.stremio.one" class="btn btn-primary" target="_blank">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Addons Section -->
+    <section class="addons-section">
+        <div class="container">
+            <h2 class="section-title">Popular Stremio Addons</h2>
+            
+            <!-- Search & Filter -->
+            <div class="search-bar">
+                <input type="text" id="addonSearch" placeholder="Search addons..." class="search-input">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterAddons('all')">All</button>
+                    <button class="filter-btn" onclick="filterAddons('movies')">Movies</button>
+                    <button class="filter-btn" onclick="filterAddons('tv')">TV Shows</button>
+                </div>
+            </div>
+
+            <!-- Addons Grid -->
+            <div class="addons-grid" id="addonsGrid">
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>Torrentio</h3>
+                        <span class="badge">Top Rated</span>
+                    </div>
+                    <p>Instant Torrent Streaming - Movies & TV Shows</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> 4K Support</span>
+                        <span class="feature"><i class="fas fa-check"></i> No Buffering</span>
+                        <span class="feature"><i class="fas fa-check"></i> Free</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('stremio://addon/community/torrentio@stremio.community/manifest.json')">Copy URL</button>
+                        <a href="stremio://addon/community/torrentio@stremio.community/manifest.json" class="btn btn-small btn-secondary">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>YTS Movies</h3>
+                        <span class="badge">HD Movies</span>
+                    </div>
+                    <p>High Quality Movie Selection</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> 1080p/720p</span>
+                        <span class="feature"><i class="fas fa-check"></i> Fast Downloads</span>
+                        <span class="feature"><i class="fas fa-check"></i> Latest Releases</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('stremio://addon/community/yts@stremio.community/manifest.json')">Copy URL</button>
+                        <a href="stremio://addon/community/yts@stremio.community/manifest.json" class="btn btn-small btn-secondary">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="tv">
+                    <div class="addon-header">
+                        <h3>EZTV</h3>
+                        <span class="badge">TV Shows</span>
+                    </div>
+                    <p>Latest TV Shows & Episodes</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> New Episodes</span>
+                        <span class="feature"><i class="fas fa-check"></i> Weekly Updates</span>
+                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('stremio://addon/community/eztv@stremio.community/manifest.json')">Copy URL</button>
+                        <a href="stremio://addon/community/eztv@stremio.community/manifest.json" class="btn btn-small btn-secondary">Install</a>
+                    </div>
+                </div>
+
+                <div class="addon-card" data-category="movies">
+                    <div class="addon-header">
+                        <h3>OpenMovie Database</h3>
+                        <span class="badge">Official</span>
+                    </div>
+                    <p>Movie & TV Show Information & Ratings</p>
+                    <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> IMDb Integration</span>
+                        <span class="feature"><i class="fas fa-check"></i> Ratings</span>
+                        <span class="feature"><i class="fas fa-check"></i> Metadata</span>
+                    </div>
+                    <div class="addon-actions">
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('stremio://addon/community/openmoviodb@stremio.community/manifest.json')">Copy URL</button>
+                        <a href="stremio://addon/community/openmoviodb@stremio.community/manifest.json" class="btn btn-small btn-secondary">Install</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Guide -->
+    <section class="setup-guide">
+        <div class="container">
+            <h2 class="section-title">How to Install Addons</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Open Stremio</h3>
+                    <p>Launch the Stremio application</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Go to Addons</h3>
+                    <p>Click on the "Addons" section</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Add Addon</h3>
+                    <p>Click "Install" button or paste URL</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Enjoy!</h3>
+                    <p>Start streaming your content</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>StreamHub</h4>
+                    <p>Your premium streaming portal</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cloudstream.html">CloudStream</a></li>
+                        <li><a href="nuvio.html">Nuvio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="mailto:m10juniorr@gmail.com">m10juniorr@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StreamHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

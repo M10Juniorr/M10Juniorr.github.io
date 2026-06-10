@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyStream - Premium Streaming Solutions</title>
+    <title>CloudStream - Repositories & Sources</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,9 +17,9 @@
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="stremio.html" class="nav-link">Stremio</a></li>
-                <li><a href="cloudstream.html" class="nav-link">CloudStream</a></li>
+                <li><a href="cloudstream.html" class="nav-link active">CloudStream</a></li>
                 <li><a href="nuvio.html" class="nav-link">Nuvio</a></li>
-                <li><a href="skystream.html" class="nav-link active">SkyStream</a></li>
+                <li><a href="skystream.html" class="nav-link">SkyStream</a></li>
                 <li><a href="playtorrio.html" class="nav-link">PlayTorrio</a></li>
             </ul>
             <div class="contact-info">
@@ -31,126 +31,126 @@
     </nav>
 
     <!-- Service Header -->
-    <section class="service-header" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">
+    <section class="service-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
         <div class="container">
-            <h1>SkyStream</h1>
-            <p>Premium Streaming Solutions & Services</p>
+            <h1>CloudStream</h1>
+            <p>Repositories, Sources & Custom Providers</p>
         </div>
     </section>
 
     <!-- Download Section -->
     <section class="download-section">
         <div class="container">
-            <h2 class="section-title">Download SkyStream</h2>
+            <h2 class="section-title">Download CloudStream</h2>
             <div class="download-grid">
                 <div class="download-box">
                     <i class="fab fa-android"></i>
                     <h3>Android</h3>
-                    <p>Latest Version</p>
-                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                    <p>APK & App Store</p>
+                    <a href="https://github.com/LagradOst/CloudStream-3/releases" class="btn btn-primary" target="_blank">Download</a>
                 </div>
                 <div class="download-box">
-                    <i class="fab fa-windows"></i>
-                    <h3>Windows</h3>
-                    <p>Desktop App</p>
-                    <a href="#" class="btn btn-primary" target="_blank">Download</a>
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Latest Release</p>
+                    <a href="https://github.com/LagradOst/CloudStream-3" class="btn btn-primary" target="_blank">Download</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
+    <!-- Repositories Section -->
     <section class="addons-section">
         <div class="container">
-            <h2 class="section-title">SkyStream Solutions</h2>
+            <h2 class="section-title">Popular Repositories</h2>
             
-            <!-- Search & Filter -->
+            <!-- Search -->
             <div class="search-bar">
-                <input type="text" id="solutionSearch" placeholder="Search solutions..." class="search-input">
+                <input type="text" id="repoSearch" placeholder="Search repositories..." class="search-input">
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterAddons('all')">All</button>
                     <button class="filter-btn" onclick="filterAddons('movies')">Movies</button>
-                    <button class="filter-btn" onclick="filterAddons('live')">Live TV</button>
+                    <button class="filter-btn" onclick="filterAddons('tv')">TV Shows</button>
                 </div>
             </div>
 
-            <!-- Solutions Grid -->
-            <div class="addons-grid" id="solutionsGrid">
+            <!-- Repos Grid -->
+            <div class="addons-grid" id="reposGrid">
                 <div class="addon-card" data-category="movies">
                     <div class="addon-header">
-                        <h3>Movies Library</h3>
-                        <span class="badge">Extensive</span>
+                        <h3>HiMovies Repository</h3>
+                        <span class="badge">Movies</span>
                     </div>
-                    <p>Access to thousands of movies worldwide</p>
+                    <p>Latest Movies & HD Quality</p>
                     <div class="addon-features">
                         <span class="feature"><i class="fas fa-check"></i> 4K Movies</span>
-                        <span class="feature"><i class="fas fa-check"></i> Multiple Languages</span>
-                        <span class="feature"><i class="fas fa-check"></i> Regular Updates</span>
+                        <span class="feature"><i class="fas fa-check"></i> No Ads</span>
+                        <span class="feature"><i class="fas fa-check"></i> Fast</span>
                     </div>
                     <div class="addon-actions">
-                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-movies')">Copy Link</button>
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://raw.githubusercontent.com/cloudstream-providers/all-providers/main/HiMoviesProvider.json')">Copy Link</button>
                     </div>
                 </div>
 
-                <div class="addon-card" data-category="live">
+                <div class="addon-card" data-category="tv">
                     <div class="addon-header">
-                        <h3>Live TV Channels</h3>
-                        <span class="badge">24/7</span>
+                        <h3>FlixHQ Repository</h3>
+                        <span class="badge">TV Shows</span>
                     </div>
-                    <p>Live TV from 100+ channels</p>
+                    <p>Latest TV Shows & Series</p>
                     <div class="addon-features">
+                        <span class="feature"><i class="fas fa-check"></i> New Episodes</span>
                         <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
-                        <span class="feature"><i class="fas fa-check"></i> EPG Guide</span>
-                        <span class="feature"><i class="fas fa-check"></i> Recording Option</span>
+                        <span class="feature"><i class="fas fa-check"></i> Fast Updates</span>
                     </div>
                     <div class="addon-actions">
-                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-live')">Copy Link</button>
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://raw.githubusercontent.com/cloudstream-providers/all-providers/main/FlixHQProvider.json')">Copy Link</button>
                     </div>
                 </div>
 
-                <div class="addon-card" data-category="movies">
+                <div class="addon-card" data-category="tv">
                     <div class="addon-header">
-                        <h3>TV Series Hub</h3>
-                        <span class="badge">Binge</span>
+                        <h3>GogoAnime Repository</h3>
+                        <span class="badge">Anime</span>
                     </div>
-                    <p>Complete TV series and episodes</p>
+                    <p>Anime & Manga Content</p>
                     <div class="addon-features">
-                        <span class="feature"><i class="fas fa-check"></i> Latest Episodes</span>
-                        <span class="feature"><i class="fas fa-check"></i> Full Seasons</span>
-                        <span class="feature"><i class="fas fa-check"></i> HD Quality</span>
+                        <span class="feature"><i class="fas fa-check"></i> Subbed & Dubbed</span>
+                        <span class="feature"><i class="fas fa-check"></i> HD Anime</span>
+                        <span class="feature"><i class="fas fa-check"></i> Latest Releases</span>
                     </div>
                     <div class="addon-actions">
-                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://example.com/skystream-tv')">Copy Link</button>
+                        <button class="btn btn-small btn-primary" onclick="copyToClipboard('https://raw.githubusercontent.com/cloudstream-providers/all-providers/main/GogoAnimeProvider.json')">Copy Link</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Setup Guide -->
+    <!-- Custom Sources -->
     <section class="setup-guide">
         <div class="container">
-            <h2 class="section-title">Quick Setup Guide</h2>
+            <h2 class="section-title">Add Custom Sources</h2>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Download App</h3>
-                    <p>Download SkyStream for your device</p>
+                    <h3>Open CloudStream</h3>
+                    <p>Launch CloudStream app</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Install</h3>
-                    <p>Install the application</p>
+                    <h3>Settings</h3>
+                    <p>Go to Settings menu</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Launch</h3>
-                    <p>Open SkyStream app</p>
+                    <h3>Add Provider</h3>
+                    <p>Select "Add Custom Provider"</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3>Start Streaming</h3>
-                    <p>Browse and start watching</p>
+                    <h3>Paste URL</h3>
+                    <p>Paste repository link and confirm</p>
                 </div>
             </div>
         </div>
@@ -168,8 +168,8 @@
                     <h4>Services</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="stremio.html">Stremio</a></li>
                         <li><a href="nuvio.html">Nuvio</a></li>
-                        <li><a href="playtorrio.html">PlayTorrio</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
